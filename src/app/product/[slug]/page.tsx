@@ -14,7 +14,6 @@ async function getProductDetails(slug: string) {
         'categoryName': category->name
     }[0]`;
 	const result = await client.fetch(query);
-	console.log(result);
 	return result;
 }
 
