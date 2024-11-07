@@ -1,3 +1,4 @@
+import AddToBag from "@/components/molecules/add-to-bag";
 import ImageGallery from "@/components/molecules/image-gallery";
 import { Button } from "@/components/ui/button";
 import { Product } from "@/lib/types";
@@ -48,6 +49,7 @@ export default async function ProductPage({ params }: { params: { slug: string }
 							<span className="text-sm">2-4 Day Shipping</span>
 						</div>
 						<div className="flex gap-2.5">
+							<AddToBag currency="USD" image={data.images[0]} name={data.name} price={data.price} key={data._id} description={data.description} />
 							<Button variant={"secondary"}>Checkout Now</Button>
 						</div>
 						<p className="mt-12 text-base text-gray-500 tracking-wide">{data.description}</p>
