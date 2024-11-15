@@ -44,5 +44,10 @@ export const Product = defineType({
 				},
 			],
 		}),
+		defineField({
+			name: "price_id",
+			title: "Product's Price ID",
+			type: "string"
+		}),
 	],
 });
