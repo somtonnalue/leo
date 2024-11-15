@@ -15,7 +15,7 @@ async function getProductDetails(slug: string) {
         images,
         'categoryName': category->name
     }[0]`;
-	const result = await client.fetch(query);
+	const result = await client.fetch(query, {}, { cache: "no-store" });
 	return result;
 }
 
@@ -51,7 +51,6 @@ export default async function ProductPage({ params }: { params: { slug: string }
 						</div>
 						<div className="flex gap-2.5">
 							<AddToBag currency="USD" image={data.images[0]} name={data.name} price={data.price} key={data._id} description={data.description} price_id={data.price_id} />
-							<Button variant={"secondary"}>Checkout Now</Button>
 						</div>
 						<p className="mt-12 text-base text-gray-500 tracking-wide">{data.description}</p>
 					</div>

@@ -1,6 +1,5 @@
 import { SimplifiedProduct } from "@/lib/types";
 import { client } from "@/sanity/lib/client";
-import { Product } from "@/sanity/schemaTypes/product";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
