@@ -14,7 +14,7 @@ async function getProductsByCategory(category: string) {
       "categoryName": category->name
   }
   `;
-	const data = await client.fetch(query);
+	const data = await client.fetch(query, {}, { cache: "no-store" });
 	return data;
 }
 
